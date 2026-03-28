@@ -1,4 +1,4 @@
-"""Upwork Semantic Job Matcher — Main CLI."""
+"""Semantic Job Matcher — Main CLI."""
 
 import re
 
@@ -23,13 +23,13 @@ console = Console()
 
 @click.group()
 def cli():
-    """Upwork Semantic Job Matcher — find the best jobs for Ali's profile."""
+    """Semantic Job Matcher — find the best matching jobs for your profile."""
     pass
 
 
 @cli.command("index-profile")
 def index_profile():
-    """Embed and store Ali's profile in Qdrant."""
+    """Embed and store your profile in Qdrant."""
     console.print("[bold]Parsing profile...[/bold]")
     text = parse_profile()
     console.print(f"Profile text length: {len(text)} chars")
@@ -177,7 +177,7 @@ def add_rss(url: str):
 @cli.command("match")
 @click.option("--top", default=10, help="Number of top matches to show")
 def match(top: int):
-    """Show top matching jobs ranked by semantic similarity to Ali's profile."""
+    """Show top matching jobs ranked by semantic similarity to your profile."""
     client = get_client()
     profile_vector = get_profile_vector(client)
     if profile_vector is None:

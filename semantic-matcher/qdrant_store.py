@@ -15,7 +15,7 @@ from qdrant_client.models import (
 
 from embedder import VECTOR_SIZE
 
-COLLECTION = "upwork_jobs"
+COLLECTION = "job_listings"
 PROFILE_ID = "00000000-0000-0000-0000-000000000001"
 HOST = "localhost"
 PORT = 6333

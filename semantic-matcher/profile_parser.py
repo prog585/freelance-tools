@@ -1,9 +1,9 @@
-"""Parse upwork-profile.md into a single rich text block for embedding."""
+"""Parse profile.md into a single rich text block for embedding."""
 
 from pathlib import Path
 import re
 
-PROFILE_PATH = Path(__file__).parent / "upwork-profile.md"
+PROFILE_PATH = Path(__file__).parent / "profile.md"
 
 
 def parse_profile(path: Path = PROFILE_PATH) -> str:
